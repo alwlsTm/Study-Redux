@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import moment from "moment";
+import './Detail.css';
 
 function getTime(id) {
   const time = moment(id).format('HH시 mm분');
@@ -15,8 +16,8 @@ function Detail() {
   );
 
   return (
-    <div>
-      <h2>{todo?.text}</h2>
+    <div className="detail-container">
+      <h3>{todo?.text}</h3>
       <p>작성 시간: {getTime(todo?.id)}</p>
     </div>
   );
